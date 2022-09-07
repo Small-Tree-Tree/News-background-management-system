@@ -1,0 +1,26 @@
+.ListBox{
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.NewsTitle{
+    color: #1890FE;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.ant-card-head-title{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.ant-card-body{
+    padding: 10px 24px;
+}
+
+.ant-drawer-title{
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -1,0 +1,602 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "password": "123456",
+      "roleState": true,
+      "default": false,
+      "region": "",
+      "roleId": 1
+    },
+    {
+      "username": "诸葛山珍",
+      "password": "123456",
+      "roleState": true,
+      "default": false,
+      "region": "北美洲",
+      "roleId": 3,
+      "id": 4
+    },
+    {
+      "username": "西门吹灯",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "南极洲",
+      "roleId": 3,
+      "id": 5
+    },
+    {
+      "username": "轩辕翠花",
+      "password": "123",
+      "roleState": true,
+      "default": false,
+      "region": "南极洲",
+      "roleId": 3,
+      "id": 6
+    },
+    {
+      "username": "司马海味",
+      "password": "123456789",
+      "roleState": true,
+      "default": false,
+      "region": "亚洲",
+      "roleId": 3,
+      "id": 7
+    }
+  ],
+  "roles": [
+    {
+      "id": 1,
+      "roleName": "超级管理员",
+      "roleType": 1,
+      "rights": {
+        "checked": [
+          "/user-manage/add",
+          "/user-manage/delete",
+          "/user-manage/update",
+          "/right-manage",
+          "/right-manage/right/list",
+          "/right-manage/role/update",
+          "/right-manage/right/update",
+          "/news-manage",
+          "/news-manage/list",
+          "/news-manage/add",
+          "/news-manage/update/:id",
+          "/news-manage/preview/:id",
+          "/news-manage/draft",
+          "/news-manage/category",
+          "/audit-manage",
+          "/audit-manage/audit",
+          "/audit-manage/list",
+          "/publish-manage",
+          "/publish-manage/unpublished",
+          "/publish-manage/published",
+          "/publish-manage/sunset",
+          "/user-manage",
+          "/user-manage/list",
+          "/right-manage/role/list",
+          "/right-manage/role/delete",
+          "/right-manage/right/delete",
+          "/mainshow"
+        ],
+        "halfChecked": []
+      }
+    },
+    {
+      "id": 2,
+      "roleName": "区域管理员",
+      "roleType": 2,
+      "rights": {
+        "checked": [
+          "/mainshow",
+          "/news-manage/list",
+          "/news-manage/add",
+          "/publish-manage",
+          "/publish-manage/unpublished",
+          "/publish-manage/published",
+          "/publish-manage/sunset",
+          "/news-manage",
+          "/audit-manage",
+          "/audit-manage/audit",
+          "/audit-manage/list",
+          "/right-manage/right/delete",
+          "/right-manage/role/update",
+          "/right-manage/right/update",
+          "/right-manage/role/delete",
+          "/right-manage",
+          "/right-manage/role/list",
+          "/news-manage/update/:id",
+          "/news-manage/preview/:id",
+          "/news-manage/draft",
+          "/news-manage/category",
+          "/user-manage/add",
+          "/user-manage/delete",
+          "/user-manage/update",
+          "/user-manage/list"
+        ],
+        "halfChecked": []
+      }
+    },
+    {
+      "id": 3,
+      "roleName": "区域编辑",
+      "roleType": 3,
+      "rights": {
+        "checked": [
+          "/mainshow",
+          "/audit-manage",
+          "/audit-manage/list",
+          "/publish-manage",
+          "/publish-manage/unpublished",
+          "/publish-manage/published",
+          "/publish-manage/sunset",
+          "/audit-manage/audit",
+          "/news-manage/list",
+          "/news-manage/add",
+          "/news-manage/update/:id",
+          "/news-manage/preview/:id",
+          "/news-manage/draft",
+          "/news-manage/category",
+          "/news-manage"
+        ],
+        "halfChecked": []
+      }
+    }
+  ],
+  "children": [
+    {
+      "id": 5,
+      "title": "修改用户",
+      "rightId": 2,
+      "key": "/user-manage/update",
+      "grade": 2
+    },
+    {
+      "id": 6,
+      "title": "用户列表",
+      "rightId": 2,
+      "key": "/user-manage/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 8,
+      "title": "角色列表",
+      "rightId": 7,
+      "key": "/right-manage/role/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 9,
+      "title": "权限列表",
+      "rightId": 7,
+      "key": "/right-manage/right/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 10,
+      "title": "修改角色",
+      "rightId": 7,
+      "key": "/right-manage/role/update",
+      "grade": 2
+    },
+    {
+      "id": 16,
+      "title": "撰写新闻",
+      "rightId": 14,
+      "key": "/news-manage/add",
+      "grade": 2,
+      "pagepermisson": 1
+    },
+    {
+      "id": 17,
+      "title": "新闻分类",
+      "rightId": 14,
+      "key": "/news-manage/category",
+      "grade": 2,
+      "pagepermisson": 1
+    },
+    {
+      "id": 19,
+      "title": "草稿箱",
+      "rightId": 14,
+      "key": "/news-manage/draft",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 22,
+      "title": "审核新闻",
+      "rightId": 21,
+      "key": "/audit-manage/audit",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 23,
+      "title": "审核列表",
+      "rightId": 21,
+      "key": "/audit-manage/list",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 25,
+      "title": "待发布",
+      "rightId": 24,
+      "key": "/publish-manage/unpublished",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 26,
+      "title": "已发布",
+      "rightId": 24,
+      "key": "/publish-manage/published",
+      "pagepermisson": 1,
+      "grade": 2
+    },
+    {
+      "id": 27,
+      "title": "已下线",
+      "rightId": 24,
+      "key": "/publish-manage/sunset",
+      "pagepermisson": 1,
+      "grade": 2
+    }
+  ],
+  "rights": [
+    {
+      "id": 1,
+      "title": "首页",
+      "key": "/mainshow",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 2,
+      "title": "用户管理",
+      "key": "/user-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 7,
+      "title": "权限管理",
+      "key": "/right-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 14,
+      "title": "新闻管理",
+      "key": "/news-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 21,
+      "title": "审核管理",
+      "key": "/audit-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    },
+    {
+      "id": 24,
+      "title": "发布管理",
+      "key": "/publish-manage",
+      "pagepermisson": 1,
+      "grade": 1
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "时事新闻",
+      "value": "时事新闻"
+    },
+    {
+      "id": 2,
+      "title": "热门话题",
+      "value": "热门话题"
+    },
+    {
+      "id": 3,
+      "title": "科学技术",
+      "value": "科学技术"
+    },
+    {
+      "id": 4,
+      "title": "军事世界",
+      "value": "军事世界"
+    },
+    {
+      "id": 5,
+      "title": "世界体育",
+      "value": "世界体育"
+    }
+  ],
+  "regions": [
+    {
+      "id": 1,
+      "title": "亚洲",
+      "value": "亚洲"
+    },
+    {
+      "id": 2,
+      "title": "欧洲",
+      "value": "欧洲"
+    },
+    {
+      "id": 3,
+      "title": "北美洲",
+      "value": "北美洲"
+    },
+    {
+      "id": 4,
+      "title": "南美洲",
+      "value": "南美洲"
+    },
+    {
+      "id": 5,
+      "title": "非洲",
+      "value": "非洲"
+    },
+    {
+      "id": 6,
+      "title": "大洋洲",
+      "value": "大洋洲"
+    },
+    {
+      "id": 7,
+      "title": "南极洲",
+      "value": "南极洲"
+    }
+  ],
+  "news": [
+    {
+      "title": "Rendering Elements",
+      "categoryId": 3,
+      "content": "<p style=\"text-align:start;\"></p>\n<h2 style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">React Only Updates What’s Necessary</span></h2>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">React DOM compares the element and its children to the previous one, and only applies the DOM updates necessary to bring the DOM to the desired state.</span></p>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">You can verify by inspecting the</span> <a href=\"https://reactjs.org/redirect-to-codepen/rendering-elements/update-rendered-element\" target=\"_blank\"><span style=\"color: rgb(26,26,26);background-color: rgba(187,239,253,0.3);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">last example</span></a> <span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">with the browser tools:</span></p>\n<p style=\"margin-left:0px;\"></p>\n<img src=\"https://reactjs.org/c158617ed7cc0eac8f58330e49e48224/granular-dom-updates.gif\" alt=\"DOM inspector showing granular updates\" style=\"height: ;width: \"/>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Even though we create an element describing the whole UI tree on every tick, only the text node whose contents have changed gets updated by React DOM.</span></p>\n<p style=\"margin-left:0px;\"><span style=\"color: rgb(0,0,0);font-size: 17px;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">In our experience, thinking about how the UI should look at any given moment, rather than how to change it over time, eliminates a whole class of bugs.</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(109,109,109);font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Is this page useful?</span><a href=\"https://github.com/reactjs/reactjs.org/tree/master/content/docs/rendering-elements.md\" target=\"_self\"><span style=\"color: rgb(55,57,64);background-color: transparent;font-size: medium;font-family: -apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, Oxygen, Ubuntu, Cantarell, \"Fira Sans\", \"Droid Sans\", \"Helvetica Neue\", sans-serif;\">Edit this page</span></a>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1615778740202,
+      "star": 800,
+      "view": 869,
+      "id": 4,
+      "publishTime": 1615778912481
+    },
+    {
+      "title": "测试",
+      "categoryId": 3,
+      "content": "<p>测试</p>\n",
+      "region": "",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1616203436307,
+      "star": 1,
+      "view": 6,
+      "id": 9,
+      "publishTime": 1616203519274
+    },
+    {
+      "title": "3eeeeeeeeeeee",
+      "categoryId": 3,
+      "content": "<p>ssssssssssssss</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 3,
+      "createTime": 1635590898161,
+      "star": 0,
+      "view": 0,
+      "id": 19,
+      "publishTime": 1635590902461
+    },
+    {
+      "title": "nwes",
+      "categoryId": 5,
+      "content": "<p>bskdbgalshljlaskldasdasd</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 2,
+      "createTime": 1662167785505,
+      "star": 4135,
+      "view": 4546,
+      "publishTime": "2022-09-04 01:10:22",
+      "id": 35
+    },
+    {
+      "title": "联播+丨服务合作促发展 习近平向世界传递中国高水平开放雄心",
+      "categoryId": 1,
+      "content": "<p style=\"text-align:start;\">&nbsp;<span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">联播+8月31日至9月5日，2022年中国国际服务贸易交易会在北京举行，主题为“服务合作促发展 绿色创新迎未来”。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　8月31日，国家主席习近平向2022年中国国际服务贸易交易会致贺信。多年来，习近平主席高度关注中国服务贸易发展，提出多项举措，持续推动中国实施更大范围、更宽领域、更深层次的对外开放。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　央视网《联播+》特梳理习主席相关重要论述，与您一起感受中国以高水平开放推进高质量发展的决心、行动和实效。</span>&nbsp;</p>\n<p></p>\n<img src=\"https://n.sinaimg.cn/news/crawl/459/w550h5509/20220903/78e4-18bde57a41e51172e9dfdb81b7c4c28f.jpg\" alt=\"undefined\" style=\"height: auto;width: auto\"/>\n<p></p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 1,
+      "createTime": 1662223315102,
+      "star": 59662,
+      "view": 46849,
+      "publishTime": "2022-09-04 01:10:23",
+      "id": 36
+    },
+    {
+      "title": "今天，致敬那场永不妥协的抗争！",
+      "categoryId": 2,
+      "content": "<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　今天，9月3日</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　是中国人民抗日战争胜利纪念日</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　也是世界反法西斯战争胜利纪念日</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　是所有中国人</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　应当铭记的日子</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/news/crawl/87/w550h337/20220903/1478-e8612d9fd49d6b18212a3e687096f514.jpg\" alt=\"\" style=\"height: ;width: \"/>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　1945年9月2日</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　泊于东京湾的密苏里号战列舰</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　在受降国代表注视下</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　日本在投降书上签字</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　记者朱启平目睹了这一幕</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　签字完毕，一看表</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　时间正是9点18分</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/news/crawl/184/w550h434/20220903/7c03-b98a7a1c8f3e8c3ae402bb27cdfa3c6e.jpg\" alt=\"日本代表签署投降书\" style=\"height: ;width: \"/>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　9月3日</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　四万万中国人民举国同庆</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　庆祝属于自己的胜利</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　那一晚的延安</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　全城轰动，万众欢腾</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　无数的火炬照亮了山巅河畔</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　群众乐队、秧歌队纷纷出发游行</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　全国各地</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　人们奔走相告、欢欣鼓舞</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　民主人士黄炎培曾写下这样的文字：</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　“夜八时，喧传日本乃真投降</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　一时远近欢呼，爆竹之声迸发”</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　“天网恢恢，元恶终归殄灭”</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/news/crawl/106/w550h356/20220903/f206-6ecee224f376394f97747c1fd0e12c86.jpg\" alt=\" 人民群众的庆祝游行\" style=\"height: ;width: \"/>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　从1931年到1945年</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　日本侵略者在华夏大地上</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　肆意屠杀中国军民</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　强行掳掠劳工</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　蹂躏和摧残妇女</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　进行细菌战和化学战</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　犯下了令人发指的罪行</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/news/crawl/146/w550h396/20220903/fcb3-cb44efbe623c56373069127f7ca655a2.jpg\" alt=\"\" style=\"height: ;width: \"/>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　国破家亡的历史记载着屈辱</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　气壮山河的抗争见证着伟大</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　从“战斗到最后一刻”的</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　南京保卫战</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　到“不惜用生命填进火海”的</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　台儿庄血战</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　从“打完子弹就上刺刀冲锋”的</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　平型关大捷</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　到“以血肉之躯消灭精良装备”的</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　百团大战</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　千千万万爱国将士</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　浴血奋战、视死如归</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　各界民众万众一心、同仇敌忾</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　以血肉之躯筑起钢铁长城</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/news/crawl/464/w550h714/20220903/ae63-fbe8065b3259e2456af14cc8504f531f.jpg\" alt=\"百团大战中，八路军攻克涞源县日军据点东团堡\" style=\"height: ;width: \"/>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　如今</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　当年的贫弱已一去不返</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　一个日益繁荣富强的中国</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　一个充满生机希望的中国</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　已经昂然屹立在世界的东方</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　牢记历史，才能开创未来</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　今天，是我们必须铭记的日子</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　我们致敬先辈</span></p>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　致敬那场永不妥协的抗争</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/news/crawl/728/w550h978/20220903/11ef-0aff2e39c11a3d0cc7051cdbca02111c.jpg\" alt=\"\" style=\"height: ;width: \"/>\n<p style=\"text-align:center;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　勿忘历史，珍爱和平！</span></p>\n<p style=\"text-align:center;\">&nbsp;<span style=\"color: rgb(115,23,23);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">振兴中华，吾辈自强！</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 1,
+      "createTime": 1662223543031,
+      "star": 456465,
+      "view": 4544565,
+      "publishTime": "2022-09-04 01:10:23",
+      "id": 37
+    },
+    {
+      "title": "2022年“引江济太”水量调度达6.08亿立方米",
+      "categoryId": 3,
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　新华社北京9月2日电（记者刘诗平）记者2日从水利部了解到，水利部自今年7月16日启动“引江济太”水量调度以来，已通过常熟水利枢纽引长江水入太湖流域6.08亿立方米，有效增加了太湖流域水资源供给，减缓了太湖水位快速下降趋势。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　今年入汛以来，受持续高温少雨等因素影响，太湖水位持续走低，影响太湖流域水资源、水生态、水环境安全。应江苏省人民政府请求，水利部启动夏季“引江济太”水量调度，这是2007年以来首次在主汛期启动“引江济太”水量调度。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　水利部水旱灾害防御司相关负责人表示，目前，累计通过常熟水利枢纽引长江水入太湖流域6.08亿立方米。其中，通过望亭水利枢纽引水入太湖3.19亿立方米，用于稳定太湖水位，促进太湖水体流动；通过望虞河向两岸水网供水2.89亿立方米，用于改善区域水环境。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　这位负责人说，通过实施“引江济太”水量调度，有效增加了太湖流域水资源供给，减缓了太湖水位快速下降趋势，满足了望虞河两岸、环太湖周边、太浦河下游等地生活、生产、航运、水生态等用水需求。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　据预测，今年第11号台风“轩岚诺”可能对太湖流域造成一定影响，9月太湖流域降雨量接近常年，在持续开展“引江济太”水量调度的情况下，9月底太湖水位可能仍较常年同期明显偏低，后期供水和水生态安全保障形势仍然严峻。</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 1,
+      "createTime": 1662223593367,
+      "star": 45644,
+      "view": 45656,
+      "publishTime": "2022-09-04 01:10:23",
+      "id": 38
+    },
+    {
+      "title": "G7想限制俄油价，俄先断了北溪-1的气",
+      "categoryId": 1,
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">西方七国集团（G7）财长刚发了联合声明，号称要对俄罗斯石油和石油产品限价，俄罗斯就宣布，“北溪-1”天然气管道又坏啦。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　啥意思？起码现在天然气就不提供给欧洲了——俄方的说法是“无限期断供”，至于石油——好像俄罗斯也不是很想卖给西方。</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/news/crawl/100/w550h350/20220904/2112-98e333fd4b5899b60d2f23715adb6871.jpg\" alt=\"“北溪-1”一旦长期断供，欧洲这个冬天将很冷图：资料\" style=\"height: ;width: \"/>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　1</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　对俄罗斯石油进行限价之事，是谁提出的呢？美国总统拜登。拜登于当地时间9月1日在费城独立厅发表演讲，抨击特朗普及其支持者对美国民主造成伤害。当场就有人对他飙脏话，之后特朗普称，拜登真是“疯了”。就是这“疯了”的拜登，之前在G7层面提议，对俄罗斯石油以及石油产品进行限价。</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/news/crawl/781/w448h333/20220904/b54f-53a08b1128f7cb6ff1454fa99df2b5db.jpg\" alt=\"\" style=\"height: ;width: \"/>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　拜登当地时间9月1日晚间在费城独立厅发表演讲</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　9月2日，G7财长举行线上会议，通过了拜登的提议。也就是说，G7对俄罗斯石油以及石油产品实施限价——俄罗斯如果报价高了，G7就不买了。G7财长还准备建立一个“广泛的国际联盟”，希望在油价高于“联盟”议定价格的时候，参与“联盟”者禁止为俄罗斯石油提供海运服务。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　海叔就闹不明白了——</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　这美国想操纵石油价格我信：本身自上世纪70年代美元与黄金脱钩、与石油挂钩以后，美国就一直想用包括军事手段在内的各种办法来操纵石油价格，为此，还不惜绕过联合国框架兵发一些中东国家。</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/news/crawl/59/w550h309/20220904/7a25-f9c2adb72ec9831145330543bacb021e.jpg\" alt=\"G7中绝大多数国家需要进口石油图：法新社\" style=\"height: ;width: \"/>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　可如今的国际石油市场，G7中，除了美国以外，其他各国大多是需要进口石油才能活命的国家。至于俄罗斯的石油，反倒是无所谓卖给谁，未必一定要卖给G7。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　这时候，让G7限制俄罗斯石油价格？不就等于逼着英、法、德、日、意等国必须在除了俄罗斯以外的国度淘换石油吗？或者干脆问美国买石油？当然，也有一个可能性，就是俄罗斯当真给出打折价——能让欧洲接受的价格。</span><br>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 1,
+      "createTime": 1662259653530,
+      "star": 4565,
+      "view": 204564,
+      "publishTime": 0,
+      "id": 40
+    },
+    {
+      "title": "山东淄博发现2例阳性感染者，为外来货车司机",
+      "categoryId": 2,
+      "content": "<p><span style=\"color: rgb(77,79,83);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　据央视新闻消息，2022年9月5日，山东省淄博市委统筹疫情防控和经济运行工作领导小组（指挥部）办公室发布通告称，9月5日，淄博市沂源县报告2例新冠病毒阳性感染者，为外来货车司机。目前，2名新冠病毒阳性感染者已由负压救护车闭环转运至定点医院隔离医学观察。淄博市疫情防控指挥部立即启动应急机制，全面开展流行病学调查、核酸检测、隔离管控和环境消杀等工作，后续相关信息将及时向社会公布。（总台记者 刘颖超 庞振 霍锡鹏 薄亚楠）</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 1,
+      "createTime": 1662347158070,
+      "star": 0,
+      "view": 0,
+      "publishTime": "2022-09-05 11:11:57",
+      "id": 41
+    },
+    {
+      "title": "台媒：苹果秋季发布会在即，iPhone 14超前备货已生产逾3400万部",
+      "categoryId": 3,
+      "content": "<p><span style=\"color: rgb(0,0,0);font-size: 18px;font-family: Microsoft Yahei\", 微软雅黑, \"STHeiti Light\", 华文细黑, SimSun, 宋体, Arial, sans-serif;\">台湾《经济日报》9月5日消息，苹果将在本周四（8日）凌晨举行秋季新品发布会，供应链传出，iPhone 14新机备货进度超前，截至目前已生产逾3400万部，即今年底原订总量9000万部的逾三分之一“已经准备好了”，高阶款更将涨价100美元，押注消费力较强的民众仍会埋单。苹果此次新品发表会，业界普遍预期将发表iPhone 14、iPhone 14 Pro、iPhone 14 Max和iPhone 14 Pro Max等四款新机。</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 1,
+      "createTime": 1662347194669,
+      "star": 0,
+      "view": 0,
+      "publishTime": "2022-09-05 11:11:58",
+      "id": 42
+    },
+    {
+      "title": "欧锦赛发生冲突事件 NBA球员在走廊被多人袭击",
+      "categoryId": 5,
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", 微软雅黑, SimSun, 宋体, Arial;\">北京时间9月5日，男篮欧锦赛小组赛，土耳其对阵格鲁吉亚的比赛在格鲁吉亚举行，比赛中双方发生冲突，土耳其球员科尔克马兹在被驱逐后，在更衣室的走廊里被格鲁吉亚的球员袭击。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", 微软雅黑, SimSun, 宋体, Arial;\">　　比赛中，科尔克马兹和格鲁吉亚球员萨那泽发生冲突，场面一度十分混乱，还有观众向场内扔水瓶。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", 微软雅黑, SimSun, 宋体, Arial;\">　　随后两人均被驱逐出场，当科尔克马兹离开赛场往更衣室走去时，遭到了萨那泽在内的三名格鲁吉亚球员的袭击。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", 微软雅黑, SimSun, 宋体, Arial;\">　　土耳其男篮要求欧锦赛组委会对肇事者进行处罚，并提供更衣室走廊袭击事件发生处的监控录像，否则土耳其将退出欧锦赛。</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 1,
+      "createTime": 1662347262996,
+      "star": 0,
+      "view": 0,
+      "publishTime": "2022-09-05 11:12:06",
+      "id": 43
+    },
+    {
+      "title": "F1荷兰大奖赛：维斯塔潘冠军 拉塞尔亚军乐扣季军",
+      "categoryId": 5,
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", 微软雅黑, SimSun, 宋体, Arial;\">　　2022年F1荷兰大奖赛正赛一波三折，最终红牛车队维斯塔潘在最后一次安全车结束后超越汉密尔顿，成功在主场拿到冠军！完成了在赞德沃特主场的两连冠。梅赛德斯车队拉塞尔收获亚军，法拉利车队勒克莱尔拿到季军！</span> <span style=\"color: rgb(77,79,83);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", 微软雅黑, SimSun, 宋体, Arial;\">　汉密尔顿、佩雷兹、阿隆索、诺里斯、塞恩斯、奥康、斯托尔分列四至十位。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", 微软雅黑, SimSun, 宋体, Arial;\">　　维斯塔潘：这并非一场一蹴而就的比赛。。。。。。我们在比赛重启时做得不错。能再次赢下比赛是难以置信的。赢下主场大奖赛总是很特别的。我为荷兰而骄傲！</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", 微软雅黑, SimSun, 宋体, Arial;\">　　谈到积分榜上与维斯塔潘的差距，勒克莱尔：已经非常大了，我们会一场一场地比，尽可能释放赛车的潜能，然后看看会发生什么。</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 1,
+      "createTime": 1662347315968,
+      "star": 0,
+      "view": 0,
+      "publishTime": "2022-09-05 11:12:07",
+      "id": 44
+    },
+    {
+      "title": "中国参加的这个军演，有三大亮点不得不说！",
+      "categoryId": 4,
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">近日俄罗斯“东方-2022”战略大演习进行了全员全要素实兵实弹合练。其中无论装备构成，还是演练课目都非常有亮点，至少有三个方面是必须要高度关注的。</span></p>\n<p style=\"text-align:start;\">&nbsp;<span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">亮点一：055编队是否会与俄海军进行联合巡航</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　中国军方首次派出三军部队参加本次“东方”大演习，虽然陆军、空军都派出了主战装备，并且陆军的99坦克和04A步战车与俄陆军派出的装甲兵力相当，空军派出的歼-10B也与俄军战机处于同一水平线。但首次参加俄战略军演的中国海军首秀就是一个非常高的起点：055型万吨驱逐舰首舰南昌舰、054A导弹护卫舰盐城舰、大型综合补给舰东平湖舰。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　这个编队一出，即便不能说出道即巅峰，但无论颜值还是战力都是相当可观。</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/sinakd20220905s/121/w554h367/20220905/1620-6cc0faf1ad53a1de4385d969a9a22e09.png\" alt=\"\" style=\"height: ;width: \"/>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　对于本次演练的内容，中国军方的报道比较低调。据解放军报报道，海上演练方面，在风力较大的条件下，官兵根据指挥所传来的目标信息，百余发炮弹瞬间倾泻而出，数千米外的伞靶应声坠海。此次演练，中方旨在检验装备性能，促进与外军之间的协同配合，提高舰艇防空反导能力和对空作战训练水平。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　俄媒体和俄军方则透露了更多演练细节。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　俄卫星网4日报道称，俄罗斯国防部称，在“东方-2022” 演习期间，俄罗斯太平洋舰队和中国人民解放军海军的军舰在日本海中部演练了联合搜索和攻击假想敌潜艇课目。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　“在空中侦察过程中，使用声呐探测的卡-27PL舰载直升机的机组人员在该区域发现了潜艇行动迹象。俄中舰队进行了搜索区域划分，并开始反潜战术行动。‘俄联邦英雄阿尔达尔∙齐坚扎波夫’号护卫舰发现了潜艇。假想敌潜艇无视取得联系的尝试，并试图离开该区域。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　俄方舰员使用Paket-NK反潜系统模拟对潜艇发动攻击，卡-27PL直升机则对其使用深水炸弹。据介绍，俄太平洋舰队的一艘潜艇扮演假想敌潜艇。</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/sinakd20220905s/169/w554h415/20220905/27fa-b71a526eb7b945f3da382388f17e048a.png\" alt=\"\" style=\"height: ;width: \"/>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　俄国防部通报中，没有提到中方舰艇编队在搜潜和攻潜演练过程中具体发挥了哪些作用。这一点可以理解，因为俄方的通报必然会更突出自身舰艇在相关演练中的作用，毕竟“东方”演习是俄罗斯组织的战略级别大演习。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　但老刘认为，中方在相关反潜课目中，必然会发挥自身的性能定位与技战术特色。首先，054A型的盐城舰本身在定位中就具有很强的反潜职能。而055型导弹驱逐舰作为本次参演中方海军编队中战斗力最强的战舰，可以说在防空、反舰、反潜，甚至反导方面基本上是一个“六边形战士”。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　因此，从这个角度来分析，中方参演的这两艘战舰肯定会在反潜等相关演练课目中发挥相当可观的作用，但作为受邀参演的外军舰艇，肯定不会过分抢东道主的风头。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　而除了技战术层面的意义。055领衔的中国海军舰艇编队首次参加俄战略大演习可能还有一层看点：是否将会与俄海军舰艇编队再次进行联合海上巡航。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　有专家在接受媒体采访时分析认为，“不排除在演习结束后中俄举行第二次联合巡航。当前形势下，中俄强化全面合作至关重要，尤其是军事领域合作，有助维护地区和平与稳定，但军事合作不针对第三方。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　根据公开报道，2021年中俄“海上联合-2021”军事演习结束后，中俄海军组成联合编队，自彼得大帝湾海域出发，横渡日本海，经津轻海峡进入西太平洋，穿越大隅海峡后抵达东海海域，完成首次海上联合巡航。期间，双方组织实施了联合航渡、联合机动、实际使用武器等多课目演练，展开了突破性的深度合作。</span></p>\n<p style=\"text-align:start;\">&nbsp;<span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">亮点二：中国营“看不见”的战斗力</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　作战装备在战场充分发挥作战效能，离不开后勤保障能力的加成作用。在本次中方参演部队中就有着一支堪称战斗力倍增器的部队。</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/sinakd20220905s/51/w554h297/20220905/cfe1-41a99e36642b7c6186b7a8b8f4620ae8.png\" alt=\"\" style=\"height: ;width: \"/>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　据央视军事报道介绍，在中国参演部队的指挥所周围架设了非常多的天线，在指挥席位和官兵住宿区的帐篷里也安装了座机电话，官兵还配发了专用手机，能够实现中国营营地到演习区域到国内的全时通信。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　据央视报道，这次演习中方派出了陆海空多个军兵种参演，作战信息的实时准确传输对于通信保障要求很高。同时，境外陌生地域的复杂气象条件和多国部队参演构成的复杂电磁环境也增加了通信保障的难度。据参演部队介绍，他们依托各类无线通信手段互为主备，严密组织电磁频谱监测，确保指挥信息链路全时不间断，通过开通话音、视频、数据多种通信业务，保障指挥机构利用指挥系统和各类移动通信终端，高效、可靠地指挥控制实兵演习行动。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　此外，境外演练也考验着气象分队，特别是航空兵部队的飞行转场、炮兵部队的精准打击都会受到空中风和低云等气象要素影响。据央视报道，演习期间气象分队使用野战气象仪和激光测风雷达、激光测云雷达从现地采集气象数据，还会通过基地内的卫星天线接收从国内传来的气象数据，并将相关数据汇集在一起与国内专家进行气象会商，共同做出气象预报。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　据参演部队介绍，他们的预报涵盖演习陆域、海域、空域及重要的机场、港口，结合大量数据可以制作72小时的精确预报和7天的趋势预报。在实兵行动期间，可以做到每小时更新一次预报，全力为演习做好气象保障。</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/sinakd20220905s/46/w554h292/20220905/2fbe-d2815ab9db77bb79ee1fe26f62ecc48b.png\" alt=\"\" style=\"height: ;width: \"/>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　根据央视报道的画面，在营区后面的车场里停放着99型坦克、04A步战车等200多台陆上作战装备，如何在陌生演习区域对这么多作战装备进行维修维护也是一大挑战。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　据参演部队装备维修人员介绍，参演装备种类多、数量大，又是在境外无依托条件下执行任务，装备保障工作面临很大考验，他们选拔了指挥、通信、电气、底盘和火炮5个专业的维修人才，配备了包含各类动力舱在内的上千件维修器材，能够做到现地维修，故障不过夜。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　老刘认为，实战化的演练不仅考验着装备性能与作战部队人员的军事素质，更考验着包括通信保障分队、气象分队、装备维修保障分队等在内的后勤保障力量的厚度，而这种境外无依托、陌生环境下的演练对于提升解放军相关保障力量的实战化素养具有非常关键的作用。这种能力可能只能从实战化练兵中来要。</span></p>\n<p style=\"text-align:start;\">&nbsp;<span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">亮点三：俄拿了电子战压箱底利器</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　演练中，俄军出动了一整套电子战系统，而俄军对于这类装备的使用模式也值得中方借鉴。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　俄卫星通讯社4日报道称，在演习期间，俄军使用“克拉苏哈”电子战系统保护该地区军事基础设施和部队免遭假想敌空中雷达侦察，特别注意保护野战指挥所、防空系统和军事编队等。同时，使用“博里索格列布斯克-2”电子战系统检测和定位模拟敌人的无线电电子装备。另外还大量使用先进的“海底动物”和“小树林”电子战系统，对假想敌的电子系统进行干扰和压制。</span>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 1,
+      "createTime": 1662347364444,
+      "star": 0,
+      "view": 0,
+      "publishTime": "2022-09-05 11:12:10",
+      "id": 45
+    },
+    {
+      "title": "英国将迎来“新铁娘子”？",
+      "categoryId": 4,
+      "content": "<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　当地时间9月2日下午五点，大选投票截止，约18万名英国保守党成员已经在特拉斯与英国前财政大臣苏纳克之间做出了抉择。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　最终结果将在当地时间9月5日当地时间中午12时30分（北京时间晚上7时30分）公布，胜者将成为保守党党魁，并自动成为英国首相。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　据《卫报》报道，目前无论是博彩网站还是多项民调都普遍显示，特拉斯在党内的支持率要高于苏纳克，两人得票比例约为6：4。如果特拉斯获胜，她将成为英国第三任女首相。</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/sinakd20220904s/220/w655h365/20220904/7417-727bd0ce87ca164d7489072835d724da.png\" alt=\"\" style=\"height: ;width: \"/>\n<p style=\"text-align:start;\">&nbsp;<span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">曾是自由民主党的新星</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　相比于撒切尔自始至终的保守立场，特拉斯年轻时曾站在保守党的对立面。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　特拉斯于1975年出生在牛津，并非来自传统的英国“伊顿-牛津”政治精英阶层。她的父亲是英国利兹大学的数学教授，母亲是一名热衷核裁军运动的护士，父母都是坚定的自由主义者。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　在这样的家庭中成长，特拉斯从小信奉的便是自由主义，她儿时还参加过反撒切尔的抗议活动，她跟着大人们一起上街高喊：“玛吉、玛吉（撒切尔的名字简称），滚出去！滚出去！”</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/sinakd20220904s/99/w544h355/20220904/020d-1acecf8c8a0339bd332997c05ef55b70.png\" alt=\"19岁的特拉斯在牛津上学时曾是自由民主党的新星。（图源：社交网络）\" style=\"height: ;width: \"/>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　前往利兹念完高中后，特拉斯在18岁时回到老家，考入牛津大学学习政治、哲学和经济学，并担任牛津大学自由民主党主席。在此期间，她在电视上呼吁废除君主制，引得台下自由民主党员们发出阵阵喝彩。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　她振振有词地说道，“现在的英国，只有一个家庭可以诞生国家元首，但我们自由民主党人相信，所有人都应该有机会，我们不相信人是为被统治而生的”，这也让特拉斯在英国第三大政党自由民主党内有了名气。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　正因如此，当特拉斯在1996年转而加入保守党时，她甚至没有在第一时间告诉自己的家人。直到特拉斯的父亲收到了同事发来的一封电子邮件，“我看到你的女儿变成了托利党（保守党）！”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　据她自己承认，转投保守党的举动让她的父母感到震惊，以至于后来她以保守党身份竞选英国议会议员时，她的父亲拒绝出面为她站台。</span></p>\n<p style=\"text-align:start;\">&nbsp;<span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">叫嚣“按下核按钮”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　据英国《镜报》当地时间8月23日报道，极有可能接替约翰逊成为英国首相的特拉斯，当天在伯明翰的一场竞选活动中被问及“是否会下令发射核武器”时，这位民调领先的保守党候选人表示，必要时，她会毫不犹豫地按下核按钮，即使这意味着“全球毁灭”。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　“我认为这是首相的重要职责。我已经准备好这么做了。”她面无表情地说。</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/sinakd20220904s/93/w640h253/20220904/b19c-cf6e9f61c2e1ea7cf05358d0b98372c7.png\" alt=\"英国《镜报》报道截图\" style=\"height: ;width: \"/>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　据报道，在这场竞选活动上，当特拉斯表态当选首相后会在必要时按下核按钮后，主持人约翰·皮纳尔（John Pienaar）还问到了特拉斯可能面临的艰巨决定。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　皮纳尔对她说：“如果你成为首相，首先要做的事情之一就是被领进唐宁街10号一个非常私人的房间，在你面前会摆出所谓的‘最后手段之信’（Letters of last resort）。”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　皮纳尔接着说：“是否向搭载“三叉戟”洲际弹道导弹的核潜艇指挥官下达发射核武器的命令取决于你，这将意味着全球毁灭。我不会问你是否会按下按钮，你说你会，但面对这种任务，我会感到身体不适。这种设想会让你有什么感觉？”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　对此，特拉斯回答：“我认为这是首相的重要职责，我已经准备好了。”随后，主持人追问她对此的感觉，她又答非所问地重申了一遍：“我已经准备好这样做了。”</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/sinakd20220904s/224/w640h384/20220904/dd79-878124e7f8de5ad0506529d07f3cecbd.jpg\" alt=\"特拉斯在当天的竞选活动中 图自《卫报》\" style=\"height: ;width: \"/>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　英国1952年宣布拥有核武器，是正式同意并签署《不扩散核武器条约》（NPT）的5个拥核国家之一。《独立报》称，英国目前有225枚核弹头，正在实施“一项持续的海上威慑计划”。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　报道称，特拉斯在此前竞选首相的过程中，就曾透露有意调整核战略。而在今年2月27日，俄罗斯总统普京曾命令俄罗斯战略威慑力量进入特殊战备状态，当时普京指出，西方对俄罗斯不仅在经济上进行遏制，而且某些领导人和官员的发言越来越具有侵略性。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　虽然普京当时没有具体点名，但《镜报》提到，就在普京下令前，英国外交大臣特拉斯发表过某些言论，当时俄罗斯总统新闻秘书佩斯科夫曾回应称，特拉斯的说法“完全不可接受”。</span></p>\n<p style=\"text-align:start;\">&nbsp;<span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">英国需要“撒切尔”</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　7月末，当被问到谁是英国保守党有史以来最好的领导人时，两位英国首相候选人特拉斯（Liz Truss）与苏纳克（Rishi Sunak）不约而同地表示，是撒切尔。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", \"\\\\5FAE软雅黑\", SimSun, \"\\\\5B8B体\", Arial;\">　　事实上，目前这场首相竞选表面上看起来已形成这样一种态势：谁更像是下一位撒切尔，谁就能赢得这场比赛。</span><br>&nbsp;</p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 1,
+      "createTime": 1662347431047,
+      "star": 0,
+      "view": 0,
+      "publishTime": "2022-09-05 11:12:08",
+      "id": 46
+    },
+    {
+      "title": "意甲-罗马0-4客负乌迪内斯 穆里尼奥遭赛季首败",
+      "categoryId": 5,
+      "content": "<p style=\"text-align:start;\"></p>\n<p><span style=\"color: rgb(77,79,83);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", 微软雅黑, SimSun, 宋体, Arial;\">　北京时间9月5日02:45(意大利当地时间4日20:45)，2022/23赛季意甲第5轮展开争夺，罗马客场0比4不敌乌迪内斯，穆里尼奥遭遇赛季首败。</span></p>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", 微软雅黑, SimSun, 宋体, Arial;\">　　斯马林、卡斯多普和斯皮纳佐拉轮换出场。第5分钟，卡斯多普胸部回停门将送礼，乌多吉近距离铲射破门。</span></p>\n<p style=\"text-align:center;\"></p>\n<img src=\"https://n.sinaimg.cn/sports/transform/645/w450h195/20220905/e7af-4ed394f0b0a0a3ab92fe83adff847c97.gif\" alt=\"乌迪内斯1-0，乌多吉\" style=\"height: ;width: \"/>\n<p style=\"text-align:start;\"><span style=\"color: rgb(77,79,83);font-size: 18px;font-family: Hiragino Sans GB\", \"Microsoft Yahei\", 微软雅黑, SimSun, 宋体, Arial;\">　　第56分钟，德乌洛费乌传球，萨马尔季奇25码处劲射入网，2-0。第75分钟，马肯戈传球，佩雷拉15码处射门紧贴右侧立柱入网，3-0。第82分钟，佩雷拉传球，洛夫里奇13码处低射破门，4-0。</span>&nbsp;</p>\n<p></p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 1,
+      "createTime": 1662365858758,
+      "star": 0,
+      "view": 0,
+      "publishTime": "2022-09-05 16:23:42",
+      "id": 47
+    },
+    {
+      "title": "[男篮欧洲杯]西班牙73-83比利时",
+      "categoryId": 4,
+      "content": "<p><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 14px;font-family: Microsoft Yahei\", 微软雅黑, SimSun, 宋体, \"Arial Narrow\", serif;\">俄罗斯自由媒体网刊登维塔利·奥尔洛夫的一篇文章，题为《S-500“普罗米修斯”防空导弹系统陆续装备部队》：来自“军队-2022”国际军事技术论坛的一个好消息是，“金刚石-安泰”集团公司签署了向俄罗斯联邦国防部提供S-500“普罗米修斯”远程防空系统的合同。早在去年8月，时任副总理尤里·鲍里索夫就宣布开始批量生产这种防空导弹系统，两个月后，第一个旅的S-500在俄空天军第15特种部队投入战斗值班。S-500“普罗米修斯”属于先进的新一代防空导弹系统，在世界上还没有同类产品。</span><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);\"> </span><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);font-size: 14px;font-family: Microsoft Yahei\", 微软雅黑, SimSun, 宋体, \"Arial Narrow\", serif;\">俄罗斯自由媒体网刊登维塔利·奥尔洛夫的一篇文章，题为《S-500“普罗米修斯”防空导弹系统陆续装备部队》：来自“军队-2022”国际军事技术论坛的一个好消息是，“金刚石-安泰”集团公司签署了向俄罗斯联邦国防部提供S-500“普罗米修斯”远程防空系统的合同。早在去年8月，时任副总理尤里·鲍里索夫就宣布开始批量生产这种防空导弹系统，两个月后，第一个旅的S-500在俄空天军第15特种部队投入战斗值班。S-500“普罗米修斯”属于先进的新一代防空导弹系统，在世界上还没有同类产品。</span><span style=\"color: rgb(0,0,0);background-color: rgb(255,255,255);\"> </span></p>\n",
+      "region": "全球",
+      "author": "admin",
+      "roleId": 1,
+      "auditState": 2,
+      "publishState": 1,
+      "createTime": 1662366082659,
+      "star": 0,
+      "view": 0,
+      "publishTime": "2022-09-05 16:23:43",
+      "id": 48
+    }
+  ]
+}
